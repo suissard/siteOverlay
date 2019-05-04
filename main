@@ -1,0 +1,286 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // DONNEES EQUIPES ===================================================================================
+
+
+
+
+        // ===========================================================
+        var nom1 = "Equipe 1";
+        var score1 = 0;
+        // -----------------------------------------------------------   
+        var nom2 = "Equipe 2";
+        var score2 = 0;
+        // ===========================================================
+
+
+
+
+
+        // CODE JQUERY =======================================================================================
+        jQuery(document).ready(function () {
+
+            $(".team#one").text(nom1);
+            $(".scoreteam#one").text(score1);
+
+            $(".team#two").text(nom2);
+            $(".scoreteam#two").text(score2);
+
+        })
+    </script>
+
+    <style type="text/css">
+        @font-face {
+            font-family: "overwatch";
+            src: url('./overwatch.ttf');
+        }
+
+        html {
+            background-color: rgb(0, 0, 0, 0);
+            transition: 5s ease;
+
+            height: 1080px;
+            width: 1920px;
+            color: white;
+            font-style: bold;
+            font-size: 45px;
+            font-family: 'overwatch', 'Times New Roman';
+
+        }
+
+        .barreScore {
+            text-align: center;
+            height: 60px;
+            width: 1920px;
+            background-color: rgb(0, 0, 0, 0);
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            left: 0px;
+        }
+
+        .team {
+            text-align: center;
+            width: 620px;
+            position: absolute;
+            top: 0px;
+        }
+
+        .scoreteam {
+            /* opacity: 0; */
+            text-align: center;
+            color: black;
+            width: 75px;
+            background-color: white;
+            position: absolute;
+            top: 0px;
+        }
+
+        /* ------------------------------------------------------------------------------ */
+
+        .team#one {
+            background-color: #2586af;
+            left: 0px;
+        }
+
+        .scoreteam#one {
+            color: #2586af;
+            left: 600px;
+            transform: skew(-20deg);
+        }
+
+        /* ------------------------------------------------------------------------------ */
+
+        .team#two {
+            background-color: #9c061b;
+            right: 0px;
+        }
+
+        .scoreteam#two {
+            color: #9c061b;
+            right: 600px;
+            transform: skew(20deg);
+        }
+
+        /* ------------------------------------------------------------------------------ */
+
+        .score {
+            display: inline-block;
+
+            text-align: center;
+            width: 320px;
+            background-color: rgba(150, 150, 150, 0.75);
+            font-size: 35px;
+
+        }
+
+        .pubReseaux {
+            position: absolute;
+            /* background-color: bisque; */
+            height: 150px;
+            width: 475px;
+
+            bottom: 0px;
+            right: 0px;
+            /* background-image: url("https://zupimages.net/up/19/18/cj2m.png"); */
+
+
+        }
+
+
+
+        .logo {
+            position: absolute;
+            left: -80px;
+            top: 0px;
+            height: 150px;
+        }
+
+        img {
+            position: absolute;
+            height: 60px;
+            top: 15px;
+        }
+
+
+
+
+
+        /* SLIDESHOW ================================================================= */
+        .contener_slideshow {
+            width: 600px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            vertical-align: center;
+        }
+
+        .slid_1,
+        .slid_2,
+        .slid_3,
+        .slid_4,
+        .slid_5 {
+            position: absolute;
+            width: 600px;
+            height: 200px;
+
+        }
+
+        .slid_1 {
+            left: 0;
+        }
+
+        .slid_2 {
+            left: 600px;
+        }
+
+        .slid_3 {
+            left: 1200px;
+        }
+
+        .slid_4 {
+            left: 1800px;
+        }
+
+        .slid_5 {
+            left: 2400px;
+        }
+
+        .contener_slide {
+            width: 600px;
+            height: 200px;
+            left: 0px;
+
+            position: absolute;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+            animation-name: anim_slide;
+        }
+
+        @keyframes anim_slide {
+            0% {
+                left: 0px;
+            }
+
+            20% {
+                left: 0px;
+            }
+
+            25% {
+                left: -600px;
+            }
+
+            45% {
+                left: -600px;
+            }
+
+            50% {
+                left: -1200px;
+            }
+
+            70% {
+                left: -1200px;
+            }
+
+            75% {
+                left: -1800px;
+            }
+
+            95% {
+                left: -1800px;
+            }
+
+            100% {
+                left: -2400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <span class="barreScore">
+        <div class="team" , id="one">
+            Equipe rouge
+        </div>
+        <div class="scoreteam" , id="one">
+            0
+        </div>
+
+        <!-- ---------------------------------------------------------------------- -->
+        <div class="score">
+            SCORE
+        </div>
+        <!-- ---------------------------------------------------------------------- -->
+
+
+        <div class="team" , id="two">
+            Equipe bleu
+        </div>
+        <div class="scoreteam" , id="two">
+            0
+        </div>
+    </span>
+
+
+
+    <div class="pubReseaux">
+        <div class="contener_slideshow">
+            <div class="contener_slide">
+                <div class="slid_1 pub"><img src="https://zupimages.net/up/19/18/cj2m.png"></div>
+                <div class="slid_2 pub"><img src="https://zupimages.net/up/19/18/iut3.png"></div>
+                <div class="slid_3 pub"><img src="https://zupimages.net/up/19/18/82jj.png"></div>
+                <div class="slid_4 pub"><img src="https://zupimages.net/up/19/18/gmup.png"></div>
+                <div class="slid_5 pub"><img src="https://zupimages.net/up/19/18/cj2m.png"></div>
+            </div>
+        </div>
+        <img class="logo" src="https://zupimages.net/up/19/18/j2dv.png" alt="logo" id="logo">
+
+    </div>
+</body>
+
+
+
+</html>
